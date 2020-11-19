@@ -72,14 +72,14 @@ public class PlanetGridAdapter extends BaseAdapter implements AdapterView.OnItem
 
     // 处理网格项的点击事件，由接口OnItemClickListener触发
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String desc = String.format("您点击了第%d个行星，它的名字是%s", position + 1,
+        String desc = String.format("您点击了第%d个商品，它的名字是%s", position + 1,
                 mPlanetList.get(position).name);
         Toast.makeText(mContext, desc, Toast.LENGTH_LONG).show();
     }
 
     // 处理网格项的长按事件，由接口OnItemLongClickListener触发
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-        String desc = String.format("您长按了第%d个行星，它的名字是%s", position + 1,
+        String desc = String.format("您长按了第%d个商品，它的名字是%s", position + 1,
                 mPlanetList.get(position).name);
         Toast.makeText(mContext, desc, Toast.LENGTH_LONG).show();
         return true;
