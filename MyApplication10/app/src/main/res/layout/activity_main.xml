@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- 第一个标签控件 -->
+    <TextView
+        android:id="@+id/tv_first"
+        style="@style/GroupTabButton"
+        android:text="@string/menu_first"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_second"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_container"
+        app:drawableTopCompat="@drawable/tab_first_selector" />
+
+
+    <!-- 第二个标签控件 -->
+    <TextView
+        android:id="@+id/tv_second"
+        style="@style/GroupTabButton"
+        android:text="@string/menu_second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_third"
+        app:layout_constraintStart_toEndOf="@+id/tv_first"
+        app:layout_constraintTop_toTopOf="@+id/tv_first"
+        app:drawableTopCompat="@drawable/tab_second_selector" />
+
+
+    <!-- 第三个标签控件 -->
+    <TextView
+        android:id="@+id/tv_third"
+        style="@style/GroupTabButton"
+        android:text="@string/menu_third"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_second"
+        app:layout_constraintTop_toTopOf="@+id/tv_second"
+        app:drawableTopCompat="@drawable/tab_third_selector" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tl_head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
